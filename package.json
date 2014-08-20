@@ -1,0 +1,31 @@
+{
+  "name": "viagemcultural-theme",
+  "description": "Viagem's Cultural main theme.",
+  "version": "14.06.0",
+  "homepage": "http://www.viagemcultural.com.br",
+  "author": "Matheus Muller <hello@memuller.com>",
+  "contributors": [
+
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/memuller/viagemcultural_theme.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "",
+    "grunt-recess": "",
+    "grunt-css": "",
+    "grunt-notify": "",
+    "grunt-contrib-watch": "",
+    "grunt-contrib-less": "",
+    "grunt-contrib-cssmin": "",
+    "grunt-contrib-coffee": ""
+  }
+}

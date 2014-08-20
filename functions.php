@@ -5,4 +5,6 @@
 		remove_action( 'admin_init', 'responsive_theme_options_init' );
 		remove_action( 'admin_menu', 'responsive_theme_options_add_page' );
 	});
+
+	require 'lib/enqueue.php' ;
 ?>
