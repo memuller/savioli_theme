@@ -1,0 +1,107 @@
+body {
+  background: white ;
+  color: #444444;
+}
+* {
+  box-sizing: border-box;
+}
+p {
+  margin: 1.5em 0px;
+}
+h1,
+h2,
+h3 {
+  color: #ba8402;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+h2 {
+  font-size: 1.5em;
+}
+.grid.col-half {
+  width: 45.5%;
+  margin-right: 5%;
+}
+#external .header {
+  line-height: 30px;
+  margin: 4px 0 4px 19px;
+  position: relative;
+  background: #fbf9ef;
+}
+#external .header h2 {
+  line-height: 30px;
+  padding: 5px 10px 0 32px;
+  margin: 0;
+}
+#external .header h2:before {
+  content: ' ';
+  background: url(images/icon-pencil.png) no-repeat 0 center;
+  width: 40px;
+  height: 40px;
+  display: block;
+  top: -3px;
+  left: -16px;
+  position: absolute;
+}
+#external .grid {
+  margin-top: 1.5em;
+}
+#external .grid h2 {
+  text-transform: uppercase;
+}
+#external .grid article {
+  position: relative;
+  margin-bottom: 1.5em;
+}
+#external .grid article img {
+  margin: -35px 0px;
+  top: 50%;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  z-index: 2 ;
+}
+#external .grid article .wrap {
+  border: 1px solid #eeeada;
+  background: #fbf9ef;
+  z-index: 1 ;
+  min-height: 120px;
+  width: 100%;
+  margin-left: 35px;
+  padding-left: 43px;
+  padding-bottom: 0.75em;
+}
+#external .grid article summary p {
+  color: #444444;
+}
+#external .grid article summary .details {
+  color: #777777;
+}
+
+@media screen and (max-width: 980px) {
+  .grid {
+    float: left;
+    margin-right: 5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .grid {
+    float: none;
+    diplay: block;
+    margin-right: 0px !important;
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .grid article img.avatar {
+    display: none;
+  }
+  .grid article .wrap {
+    padding-left: 1.5em !important;
+    margin-left: 0px !important;
+  }
+}

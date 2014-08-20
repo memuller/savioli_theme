@@ -1,0 +1,100 @@
+@blue: #2b98c2;
+@green: #67844d;
+@mustard: #67844d;
+@red: #67844d;
+
+@line_y: #ba8402;
+@background_y: #fbf9ef;
+@bar_y: #eeeada;
+@gradient_y: #f5ebd1;
+
+@footer_dark: #4f5050;
+@header_dark: #414246;
+
+@black: black;
+@dark: #444;
+@avatar_size: 70px;
+
+body {
+    background: white ;
+    color: @dark ;
+}
+
+* { box-sizing: border-box; }
+
+p { margin: 1.5em 0px; }
+
+h1, h2, h3 {
+    color: @line_y;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+
+h2 { font-size: 1.5em; }
+
+
+.grid.col-half { width: 45.5%; margin-right: 5%; }
+
+#external {
+    .header {
+        line-height: 30px;
+        margin: 4px 0 4px 19px;
+        position: relative;
+        background: @background_y;
+
+        h2 { 
+            line-height: 30px;
+            padding: 5px 10px 0 32px;
+            margin: 0;
+            &:before {
+                content: ' ';
+                background: url(images/icon-pencil.png) no-repeat 0 center;
+                width: 40px;
+                height: 40px;
+                display: block;
+                top: -3px;
+                left: -16px;
+                position: absolute;
+            }
+        }
+    }
+    .grid {
+        margin-top: 1.5em;
+        h2 { text-transform: uppercase; }
+        
+        article { 
+            position: relative;
+            margin-bottom: 1.5em;
+
+            img {
+                margin: -@avatar_size/2 0px ;
+                top: 50%;
+                position: absolute;
+                width: @avatar_size; height: @avatar_size; 
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                z-index: 2 ;
+            }
+            .wrap {
+                border: 1px solid @bar_y ;
+                background: @background_y ;
+                z-index: 1 ;
+                min-height: 120px;
+                width: 100%; 
+                margin-left: @avatar_size/2;
+                padding-left: @avatar_size/2 + 8px;
+                padding-bottom: 0.75em;
+            }
+            summary {
+                p { color: @dark; }   
+                .details {
+                    color: lighten(@dark, 20%); 
+                }
+            }
+        }
+
+    }
+
+}
