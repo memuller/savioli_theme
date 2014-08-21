@@ -10,11 +10,40 @@
 	}
 }
 
+@media screen and (max-width: 680px){
+	#logo {
+		float: none;
+		text-align: center;
+		width: 100% !important;
+		a { width: 100% !important; }
+		img { padding-left: 0px !important; width: 160px !important; }
+	}
+	.main-nav {
+		width: 100% !important;
+		ul.menu li a {
+			min-height: 40px !important;
+			padding: 0px !important;
+			border-bottom: 2px solid !important;
+		}
+	}
+}
+
 @media screen and (max-width: 480px){
 	.col-half {
 		article {
 			img.avatar { display: none; }
-			.wrap { padding-left: 1.5em !important; margin-left: 0px !important; }
+			.wrap { 
+				min-height: 90px !important; 
+				padding-left: 1.5em !important; 
+				margin-left: 0px !important;
+			}
+			.details { display: none; }
 		}
+	}
+}
+
+@media screen and (max-width: 958px){
+	#logo {
+		padding-left: 2px;
 	}
 }

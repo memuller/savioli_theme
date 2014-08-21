@@ -47,43 +47,23 @@ if( !defined( 'ABSPATH' ) ) {
 <body <?php body_class(); ?>>
 
 <?php responsive_container(); // before container hook ?>
-<div id="container" class="hfeed">
+
 
 <?php responsive_header(); // before header hook ?>
-	<div class="skip-container cf">
-		<a class="skip-link screen-reader-text focusable" href="#content"><?php _e( '&darr; Skip to Main Content', 'responsive' ); ?></a>
-	</div><!-- .skip-container -->
 	<div id="header">
-
+		<div class="container">
 		<?php responsive_header_top(); // before header content hook ?>
 
-		<?php if( has_nav_menu( 'top-menu', 'responsive' ) ) {
-			wp_nav_menu( array(
-				'container'      => '',
-				'fallback_cb'    => false,
-				'menu_class'     => 'top-menu',
-				'theme_location' => 'top-menu'
-			) );
-		} ?>
+
 
 		<?php responsive_in_header(); // header hook ?>
 
-		<?php if( get_header_image() != '' ) : ?>
 
 			<div id="logo">
-				<a href="<?php echo home_url( '/' ); ?>"><img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
+				<a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo-300.png' ?>" width="150" alt="<?php bloginfo( 'name' ); ?>"/></a>
 			</div><!-- end of #logo -->
 
-		<?php endif; // header image was removed ?>
 
-		<?php if( !get_header_image() ) : ?>
-
-			<div id="logo">
-				<span class="site-name"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-				<span class="site-description"><?php bloginfo( 'description' ); ?></span>
-			</div><!-- end of #logo -->
-
-		<?php endif; // header image was removed (again) ?>
 
 		<?php get_sidebar( 'top' ); ?>
 		<?php wp_nav_menu( array(
@@ -93,19 +73,13 @@ if( !defined( 'ABSPATH' ) ) {
 			'theme_location'  => 'header-menu'
 		) ); ?>
 
-		<?php if( has_nav_menu( 'sub-header-menu', 'responsive' ) ) {
-			wp_nav_menu( array(
-				'container'      => '',
-				'menu_class'     => 'sub-header-menu',
-				'theme_location' => 'sub-header-menu'
-			) );
-		} ?>
+
 
 		<?php responsive_header_bottom(); // after header content hook ?>
-
+		</div>
 	</div><!-- end of #header -->
 <?php responsive_header_end(); // after header container hook ?>
-
+<div id="container" class="hfeed">
 <?php responsive_wrapper(); // before wrapper container hook ?>
 	<div id="wrapper" class="clearfix">
 <?php responsive_wrapper_top(); // before wrapper content hook ?>

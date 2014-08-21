@@ -1,7 +1,7 @@
 @blue: #2b98c2;
 @green: #67844d;
-@mustard: #67844d;
-@red: #67844d;
+@mustard: #e6b842;
+@red: #ed1c24;
 
 @line_y: #ba8402;
 @background_y: #fbf9ef;
@@ -60,6 +60,69 @@ section{
     }
 }
 
+#header {
+    #logo  {
+        width: 20%;
+        a { width: 140px; display: block;}
+        img { width: 140px; padding: 2px 0px;}
+    }
+    background: linear-gradient(white, @gradient_y);
+
+    .main-nav {
+        display: inline-block;
+        width: 80%;
+        vertical-align: bottom;
+        ul.menu {
+            background-color: transparent;
+            background-image: none;
+            li {
+                width: 25%;
+                &:nth-of-type(1) a{ 
+                    border-color: @blue;
+                    color: @blue; &:hover{ background-color: @blue; }
+                }
+                &:nth-of-type(2) a{
+                    border-color: @green;
+                    color: @green; &:hover{ background-color: @green; }
+                }
+                &:nth-of-type(3) a{
+                    border-color: @mustard;
+                    color: @mustard; &:hover{ background-color: @mustard; }
+                }
+                &:nth-of-type(4) a{
+                    border-color: @red;
+                    color: @red; &:hover{ background-color: @red; }
+                }
+                a {
+                    text-transform: uppercase;
+                    border-bottom: 4px solid;
+                    border-left: 0px none;
+                    border-right: 0px none;
+                    font-size: 1.2em;
+                    font-weight: 300;
+                    text-align: center;
+                    text-shadow: none;
+                    padding: 20px 0px;
+                    min-height: 80px;
+                    background-color: transparent;
+                    background-image: none;
+                    &:hover{
+                        color: white;
+                        background-color: transparent;
+                        background-image: none;
+                    }
+                    
+                }
+            }
+
+        }
+    }
+
+    .container {
+        margin: 0px auto;
+        max-width: 960px;
+    }
+}
 
 #external {
     .header h2:before{
