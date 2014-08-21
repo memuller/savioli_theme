@@ -20,29 +20,31 @@ h2 {
   font-size: 1.5em;
 }
 .grid.col-half {
-  width: 45.5%;
-  margin-right: 5%;
+  width: 48.5%;
+  margin-right: 3%;
 }
-#external .header {
+section .header {
   line-height: 30px;
   margin: 4px 0 4px 19px;
   position: relative;
   background: #fbf9ef;
 }
-#external .header h2 {
+section .header h2 {
   line-height: 30px;
   padding: 5px 10px 0 32px;
   margin: 0;
 }
-#external .header h2:before {
+section .header h2:before {
   content: ' ';
-  background: url(images/icon-pencil.png) no-repeat 0 center;
   width: 40px;
   height: 40px;
   display: block;
   top: -3px;
   left: -16px;
   position: absolute;
+}
+#external .header h2:before {
+  background: url(images/icon-pencil.png) no-repeat 0 center;
 }
 #external .grid {
   margin-top: 1.5em;
@@ -70,7 +72,6 @@ h2 {
   background: #fbf9ef;
   z-index: 1 ;
   min-height: 120px;
-  width: 100%;
   margin-left: 35px;
   padding-left: 43px;
   padding-bottom: 0.75em;
@@ -81,15 +82,18 @@ h2 {
 #external .grid article summary .details {
   color: #777777;
 }
+#products .header h2:before {
+  background: url(images/icon-car.png) no-repeat 0 center;
+}
 
 @media screen and (max-width: 980px) {
-  .grid {
+  .col-half {
     float: left;
-    margin-right: 5%;
+    margin-right: 3%;
   }
 }
 @media screen and (max-width: 768px) {
-  .grid {
+  .col-half {
     float: none;
     diplay: block;
     margin-right: 0px !important;
@@ -97,10 +101,10 @@ h2 {
   }
 }
 @media screen and (max-width: 480px) {
-  .grid article img.avatar {
+  .col-half article img.avatar {
     display: none;
   }
-  .grid article .wrap {
+  .col-half article .wrap {
     padding-left: 1.5em !important;
     margin-left: 0px !important;
   }
