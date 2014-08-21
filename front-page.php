@@ -1,5 +1,5 @@
 <?php get_header() ?>
-<section id="external" class="widgets">
+<section id="external" class="widgets clearfix">
 	<div class="header">
 		<h2>Últimos Artigos</h2>
 	</div>
@@ -29,5 +29,23 @@
 			<?php endforeach ?>
 		</div>
 	<?php endforeach ?>
+</section>
+<section id="products" class="widgets">
+	<div class="header">
+		<h2>Lançamentos</h2>
+	</div>
+	<?php $items = \ClinicaSavioli\MagentoProduct::all() ?>
+	<div>
+		<?php foreach ($items as $item): ?>
+			<article class='grid'>
+				<a href="<?php echo $item->url ?>">
+					<img src="<?php echo $item->image ?>" title="<?php echo $item->name ?>">
+				</a>
+			</article>
+		<?php endforeach ?>
+		<div class="grid more">
+			<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/banners/gioli.png'?>">
+		</div>
+	</div>
 </section>
 <?php get_footer() ?>
