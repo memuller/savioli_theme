@@ -26,13 +26,46 @@ p { margin: 1.5em 0px; }
 
 h1, h2, h3 {
     color: @line_y;
-    font-size: 16px;
     font-weight: 300;
     font-family: sans-serif;
 }
 
+h1 { font-size: 1.8em; text-transform: uppercase; }
 h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
 
+a {
+    color: @line_y;
+    &:hover { color: darken(@line_y, 20%); }
+}
+
+#wrapper { border: none; }
+#content {
+    background-color: @background_y;
+    padding: 1em ;
+}
+.breadcrumb-list { display:none; }
+.post-meta { display: none; }
+#content {
+    .galleria {
+        height: 600px;
+    }
+}
+
+#respond {
+    background: linear-gradient('center top', white, @gradient_y);
+}
+
+.widget-wrapper {
+    background-color: transparent;
+    border: 1px solid @bar_y;
+    border-radius: 0px;
+}
+.widget-title h3 {
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
 
 .grid.col-half { width: 48.5%; margin-right: 3%; }
 
@@ -64,7 +97,7 @@ section{
     #logo  {
         width: 20%;
         a { width: 140px; display: block;}
-        img { width: 140px; padding: 2px 0px;}
+        img { width: 140px; padding: 3px 0px 0px 5px;}
     }
     background: linear-gradient(white, @gradient_y);
 
@@ -124,6 +157,45 @@ section{
     }
 }
 
+#footer{
+    .scroll-top { display: none; }
+    background: linear-gradient(@footer_dark, black);
+    width: 100%;
+    max-width: none ;
+
+    #footer-wrapper {
+        text-align: center;
+    }
+    .content {
+        display: inline-block;
+        min-width: 960px;
+        padding: 2em;
+    }
+    .powered {
+        color: white;
+        text-align: left;
+        .grid { padding-right: 1em; }
+        img {
+            display: block;
+            margin: .5em auto;            
+        }
+        .consultant img { margin-top: 1em; }
+
+    }
+    .copyright { 
+        .powered ;
+        margin-top: 2em;
+        a { color: white; } 
+    }
+}
+
+#featured {
+    border: none;
+    border-radius: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 1.5em;
+}
+
 #external {
     .header h2:before{
         background: url(images/icon-pencil.png) no-repeat 0 center;
@@ -170,5 +242,16 @@ section{
 #products {
     .header h2:before {
         background: url(images/icon-car.png) no-repeat 0 center;
+        
     }
+    ul { margin-top: 1.5em;
+        list-style: none;
+        li { 
+            width: 20%; margin-right: 2% ; 
+            .title { display: none; }
+            &.more { width: 30%; }
+            &.product img { width: 100%; }
+        }
+    }
+    
 }
