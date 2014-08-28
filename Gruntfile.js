@@ -28,7 +28,7 @@ module.exports = function(grunt) {
           join: true
         },
         files: {
-          'assets/main.min.js': ['assets/coffee/*.coffee']
+          'assets/app.min.js': ['assets/coffee/*.coffee']
         }
       }
     },
@@ -44,8 +44,18 @@ module.exports = function(grunt) {
       },
       prepare:{
         options: { spawn: false },
-        files: ['assets/app.min.css', 'assets/main.min.css', 'assets/main.min.js'],
-        tasks: ['cssmin', 'version', 'notify:ready']
+        files: ['assets/app.min.css', 'assets/main.min.css', 'assets/app.min.js'],
+        tasks: ['cssmin', 'uglify', 'version', 'notify:ready']
+      }
+    },
+
+    uglify: {
+      libs: {
+        files: {
+          'assets/main.min.js': [
+            'lib/unslider.min.js','assets/app.min.js'
+          ]
+        }
       }
     },
 
@@ -61,12 +71,13 @@ module.exports = function(grunt) {
   });
 
   grunt.loadTasks('build/tasks');
-  grunt.registerTask('default', ['less', 'cssmin', 'coffee', 'version']);
+  grunt.registerTask('default', ['less', 'cssmin', 'coffee', 'uglify', 'version']);
   grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-notify');
   grunt.load
 };

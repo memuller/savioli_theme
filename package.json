@@ -26,6 +26,7 @@
     "grunt-contrib-watch": "",
     "grunt-contrib-less": "",
     "grunt-contrib-cssmin": "",
-    "grunt-contrib-coffee": ""
+    "grunt-contrib-coffee": "",
+    "grunt-contrib-uglify": ""
   }
 }

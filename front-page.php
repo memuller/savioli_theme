@@ -2,9 +2,15 @@
 
 <section id="featured" class="">
 	<?php $banners = \Savioli\Banner::all(array('position' => 'featured', 'enabled' => true)); ?>
-	<?php foreach ($banners as $banner): ?>
-		<img src="<?php echo $banner->image ?>">	
-	<?php endforeach ?>
+	<ul>
+		<?php foreach ($banners as $banner): ?>
+			<li>
+				<a href="<?php echo $banner->url ?>">
+					<img src="<?php echo $banner->image ?>">	
+				</a>
+			</li>
+		<?php endforeach ?>
+	</ul>
 	
 </section>
 

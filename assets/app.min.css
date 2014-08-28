@@ -214,6 +214,17 @@ section .header h2:before {
   border-radius: 0px;
   padding-bottom: 0px;
   margin-bottom: 1.5em;
+  postion: relative;
+  overflow: auto;
+}
+#featured ul {
+  padding: 0px;
+  margin: 0px;
+}
+#featured ul li {
+  list-style: none;
+  float: left;
+  padding: 0px;
 }
 #external .header h2:before {
   background: url(images/icon-pencil.png) no-repeat 0 center;
