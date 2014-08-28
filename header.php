@@ -50,6 +50,7 @@ if( !defined( 'ABSPATH' ) ) {
 
 
 <?php responsive_header(); // before header hook ?>
+
 	<div id="header">
 		<div class="container">
 		<?php responsive_header_top(); // before header content hook ?>
