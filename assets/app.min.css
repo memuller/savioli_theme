@@ -17,7 +17,6 @@ h3 {
 }
 h1 {
   font-size: 1.8em;
-  text-transform: uppercase;
 }
 h2 {
   font-size: 1.5em;
@@ -48,7 +47,7 @@ a:hover {
   height: 600px;
 }
 #respond {
-  background: linear-gradient('center top', #ffffff, #f5ebd1);
+  background: linear-gradient('center top', white, #f5ebd1);
 }
 .widget-wrapper {
   background-color: transparent;
@@ -85,7 +84,7 @@ section .header h2:before {
   position: absolute;
 }
 #header {
-  background: linear-gradient(#ffffff, #f5ebd1);
+  background: linear-gradient(white, #f5ebd1);
 }
 #header #logo {
   width: 20%;
@@ -182,7 +181,7 @@ section .header h2:before {
   max-width: 960px;
 }
 #footer {
-  background: linear-gradient(#4f5050, #000000);
+  background: linear-gradient(#4f5050, black);
   width: 100%;
   max-width: none ;
 }
@@ -255,9 +254,6 @@ section .header h2:before {
 }
 #external .grid {
   margin-top: 1.5em;
-}
-#external .grid h2 {
-  text-transform: uppercase;
 }
 #external .grid article {
   position: relative;
@@ -391,7 +387,7 @@ section .header h2:before {
     width: 100%;
     top: 50px;
     z-index: 1000;
-    background: linear-gradient('center top', '#f5ebd1', #ffffff) !important;
+    background: linear-gradient('center top', '#f5ebd1', white) !important;
   }
   .main-nav .menu li {
     width: 100% !important;
