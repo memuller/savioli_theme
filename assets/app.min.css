@@ -249,7 +249,7 @@ section .header h2:before {
   max-height: 390px;
 }
 #external .header h2:before {
-  background: url(images/icon-pencil.png) no-repeat 0 center;
+  background: url(../images/icon-pencil.png) no-repeat 0 center;
 }
 #external .grid {
   margin-top: 1.5em;
@@ -285,7 +285,7 @@ section .header h2:before {
   color: #777777;
 }
 #products .header h2:before {
-  background: url(images/icon-car.png) no-repeat 0 center;
+  background: url(../images/icon-car.png) no-repeat 0 center;
 }
 #products ul {
   margin-top: 1.5em;
