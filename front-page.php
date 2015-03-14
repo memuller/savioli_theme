@@ -42,6 +42,9 @@
 					</div>
 				</article>
 			<?php endforeach ?>
+			<nav class="more right">
+				<a href="<?php echo \Savioli\ForeignPost::posts_url($i) ?>">mais posts</a>
+			</nav>
 		</div>
 	<?php endforeach ?>
 </section>

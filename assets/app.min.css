@@ -320,6 +320,9 @@ section .header h2:before {
 #external .grid article summary .details {
   color: #777777;
 }
+#external .grid .more {
+  font-style: italic;
+}
 #products .header h2:before {
   background: url(../images/icon-car.png) no-repeat 0 center;
 }
