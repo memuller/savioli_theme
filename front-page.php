@@ -26,7 +26,7 @@
 					<?php echo get_avatar($post->post_author); ?>
 					<div class="wrap">
 						<summary>
-							<a href="<?php the_permalink() ?>">
+							<a href="<?php echo $post->permalink ?>">
 								<h2><?php the_title() ?></h2>
 								<?php the_excerpt(); ?>
 							</a>
