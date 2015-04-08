@@ -43,7 +43,7 @@
 				</article>
 			<?php endforeach ?>
 			<nav class="more right">
-				<a href="<?php echo \Savioli\ForeignPost::posts_url($i) ?>">mais posts</a>
+				<a href="<?php echo \Savioli\ForeignPost::posts_url($i) ?>">mais artigos</a>
 			</nav>
 		</div>
 	<?php endforeach ?>
@@ -52,29 +52,16 @@
 	<div class="header">
 		<h2>Lançamentos</h2>
 	</div>
-	<?php $options = get_option('clinica-savioli_options');
-		$banner = \Savioli\Banner::first(array('position' => 'store', 'enabled' => true));
-		$items = \Savioli\MagentoProduct::all($options['magento_url'], 
-			$banner ? $options['magento_num_posts'] : $options['magento_num_posts'] + 1
-		); 
-	?>
+	<?php $items = \Savioli\Product::all(); ?>
 	<ul>
-		<?php foreach ($items as $item): ?>
+		<?php foreach ($items as $post): setup_postdata($post); ?>
 			<li class='grid product'>
-				<a href="<?php echo $item->url ?>">
-					<img src="<?php echo $item->image ?>" title="<?php echo $item->name ?>">
-					<div class="title"><?php echo $item->name ?></div>
+				<a href="<?php echo $post->url ?>">
+					<img src="<?php echo $post->image ?>" title="<?php echo $post->title ?>">
+					<div class="title"><?php echo $post->title ?></div>
 				</a>
 			</li>
 		<?php endforeach ?>
-		<?php if($banner): ?>
-			<li class="grid more">
-				<a href="<?php echo $banner->url ?>">
-					<img src="<?php echo $banner->image ?>">
-					<div class="title"><?php echo "conheça mais..." ?></div>
-				</a>
-			</li>
-		<?php endif ?>
 	</ul>
 </section>
 <?php get_footer() ?>
